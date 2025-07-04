@@ -4,6 +4,7 @@ import ResendEmailForm from "@/components/resend/form";
 import Tambo from "@/components/tambo";
 import BetterAuth from "@/components/better-auth";
 import Autumn from "@/components/autumn";
+import Translate from "@/components/translate";
 import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 
@@ -23,6 +24,7 @@ export default async function Home() {
       </h1>
       <BetterAuth userEmail={userEmail} />
       <Autumn />
+      <Translate />
       <Tambo />
       <ResendEmailForm />
       <Firecrawl />

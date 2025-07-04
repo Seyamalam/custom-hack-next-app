@@ -42,6 +42,14 @@
     },
     "app/page.tsx": {
       "scopes": {
+        "10/declaration/body/2/argument/1": {
+          "type": "element",
+          "hash": "50624842760e75aa1a7e0a57a5d1ea91",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome to <element:AuroraText>CustomHack train</element:AuroraText>"
+        },
         "9/declaration/body/2/argument/1": {
           "type": "element",
           "hash": "50624842760e75aa1a7e0a57a5d1ea91",
@@ -685,6 +693,66 @@
           "skip": false,
           "overrides": {},
           "content": "<element:Sparkles></element:Sparkles> Generate Name"
+        }
+      }
+    },
+    "components/translate/index.tsx": {
+      "scopes": {
+        "4/declaration/body/9/argument/1/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "cfbb8a1ebb0dd83953f1bf792f8179db",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter text to translate..."
+        },
+        "4/declaration/body/9/argument/1/5/expression/right/1": {
+          "type": "element",
+          "hash": "7fd09dea9da7e8ebf011fa8c257a806a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translation to {LANGUAGES}:"
+        },
+        "4/declaration/body/9/argument/1/7/1/expression/alternate": {
+          "type": "element",
+          "hash": "e826cb464b4dcc5ccbbda0a5950603b1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No translations left."
+        },
+        "4/declaration/body/9/argument/1/7/1/expression/consequent": {
+          "type": "element",
+          "hash": "e9ee184934e79f65339bdbb152ebef03",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Translations used: <expression/> / {included_usage}"
+        },
+        "4/declaration/body/9/argument/1/9/expression/right/1": {
+          "type": "element",
+          "hash": "a2a0d58f20713d1108cc8e07b01f8ed5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🚫 Translation limit reached! Upgrade to continue translating."
+        },
+        "4/declaration/body/9/argument/1/9/expression/right/3": {
+          "type": "element",
+          "hash": "87b1a0c2fc9d1a49e6de301277c9e50b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upgrade Now"
+        },
+        "4/declaration/body/9/argument/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "abe8059d84116f34f3216033340fba30",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "🌍 AI Translator"
         }
       }
     }
