@@ -1,171 +1,318 @@
-# custom-hack-next-app
+# 🎯 The API Whisperer
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). It is a boilerplate for [CustomHack](https://lu.ma/rnvz7h05).
+> **Transform boring API documentation into a personalized, interactive, and conversational development playground.**
 
-**tl;dr** [click here to deploy to Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flingodotdev%2Fcustom-hack-next-app) or [open in StackBlitz](https://stackblitz.com/github/lingodotdev/custom-hack-next-app).
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/api-whisperer)
 
-## Getting Started
+## 🚀 The Big Idea
 
-First, install the dependencies via a package manager (we prefer [pnpm](https://pnpm.io/)):
+**TL;DR:** We're building a magic wand that transforms any static, boring API documentation into a personalized, interactive, and conversational development playground. Point it at a URL, and we do the rest.
+
+### The Problem We're Solving
+
+Let's be honest: integrating a new API is a soul-crushing ritual. You're drowning in a sea of tabs—the ancient scroll of API docs, your code editor, and the clunky Postman window. You perform the sacred "copy-paste-pray" dance with cURL commands, manually translate examples from Python to your stack's language, and hunt for that one missing parameter that's breaking everything.
+
+**It's a flow-killer. It's tedious, error-prone, and makes innovation feel like a chore.**
+
+### Our Solution
+
+"The API Whisperer" is the co-pilot every developer wishes they had. It's a single, intelligent workspace that turns the API integration nightmare into a seamless, creative process.
+
+**Give it a URL, and it gives you:**
+
+✨ **A Living Guide:** Ask questions in plain English and get immediate, accurate answers  
+🤖 **Your Personal Coder:** Get code snippets automatically generated in your preferred language  
+🎮 **An Instant Playground:** Test endpoints with interactive forms, no setup required  
+👼 **A Guardian Angel:** Get proactive email alerts about breaking changes before they hit production
+
+## 🏗️ Architecture & Tech Stack
+
+This project integrates **8 sponsored tools** into a cohesive system where every piece is essential:
+
+### Core Integration Stack
+
+| Tool | Purpose | Role in API Whisperer |
+|------|---------|----------------------|
+| **🔐 Better Auth** | Authentication | VIP entrance with GitHub OAuth + personalization |
+| **🗄️ Supabase** | Database | Project's memory for users, APIs, conversations |
+| **🕷️ Firecrawl** | Web Scraping | Knowledge inhaler that transforms docs into structured data |
+| **🤖 Tambo.co** | Conversational AI | Interactive heart - chat about APIs, generate forms |
+| **🎨 Magic UI** | Components | Sleek interface with beautiful React components |
+| **🌍 Lingo.dev** | Translation | Universal translator for code & UI localization |
+| **📧 Resend** | Email | Proactive messenger for alerts & notifications |
+| **💰 useautumn.com** | Billing | Smart paywall with usage-based pricing |
+
+### Framework & Tools
+
+- **Next.js 15** with App Router & React 19
+- **TypeScript** for type safety
+- **Tailwind CSS 4** for styling
+- **Prisma** for database ORM
+- **PostgreSQL** via Supabase
+
+## 🎬 The "Wow" Demo Flow
+
+1. **Before:** Show a dense, confusing, real-world API documentation page
+2. **Login:** Sign in to "API Whisperer" with GitHub using Better Auth
+3. **The Magic:** Paste the docs URL. Firecrawl extracts everything in the background
+4. **The Conversation:** Tambo chat appears. Type: *"How do I create an invoice for customer 'cus_123' for $99?"*
+5. **The Result:** Watch it generate a perfect Python code snippet and an interactive Magic UI form
+6. **The Twist:** Click a dropdown and select "Go." The code seamlessly "translates" using Lingo.dev
+7. **The Test:** Click "Run Test." See the live JSON response
+8. **The Upgrade:** Try to add another API and watch the Autumn paywall appear
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ and pnpm
+- PostgreSQL database (Supabase recommended)
+- API keys for the integrated services
+
+### 1. Clone & Install
 
 ```bash
+git clone https://github.com/yourusername/api-whisperer
+cd api-whisperer
 pnpm install
 ```
 
-Next run the development server
+### 2. Environment Setup
+
+```bash
+cp .env.example .env
+```
+
+Fill in your API keys in `.env`:
+
+```env
+# Required for basic functionality
+BETTER_AUTH_SECRET=your_secret_here
+DATABASE_URL=your_supabase_url
+FIRECRAWL_API_KEY=your_firecrawl_key
+NEXT_PUBLIC_TAMBO_API_KEY=your_tambo_key
+
+# Optional but recommended
+RESEND_API_KEY=your_resend_key
+AUTUMN_SECRET_KEY=your_autumn_key
+LINGODOTDEV_API_KEY=your_lingo_key
+```
+
+### 3. Database Setup
+
+```bash
+npx prisma migrate dev
+npx prisma generate
+```
+
+### 4. Start Development
 
 ```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` and start whispering to APIs! 🎉
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔑 Getting API Keys
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Essential Keys (Demo Ready)
 
-## Learn More
+1. **Supabase** - [supabase.com](https://supabase.com)
+   - Create project → Settings → Database → Copy connection string
 
-### Lingo.dev
+2. **Firecrawl** - [firecrawl.dev](https://firecrawl.dev)
+   - Sign up → Get API key for web scraping
 
-AI localization for teams who ship fast. Translate apps, websites, and entire databases using the best LLM models.
+3. **Tambo** - [tambo.co](https://tambo.co)
+   - Create account → API keys → Copy public key
 
-- https://lingo.dev
+4. **Better Auth** - Generate locally
+   ```bash
+   openssl rand -base64 32
+   ```
 
-#### Compiler
+### Enhanced Experience Keys
 
-Next.js application is localized using Lingo.dev Compiler.
+5. **Resend** - [resend.com](https://resend.com)
+   - For email notifications
 
-- https://lingo.dev/en/compiler/frameworks/nextjs
+6. **Autumn** - [useautumn.com](https://useautumn.com)
+   - For usage-based billing
 
-Compiler is setup to use [Groq](https://groq.com/). Set your Groq API key as `GROQ_API_KEY` env variable.
+7. **Lingo.dev** - [lingo.dev](https://lingo.dev)
+   - For code translation & localization
 
-#### CLI
+## 🎯 Key Features
 
-Resend email templates are localized via Lingo.dev CLI.
+### 🔍 Intelligent API Documentation Parsing
+- **Firecrawl** scrapes any API docs URL
+- Extracts endpoints, parameters, authentication methods
+- Creates structured knowledge base for AI conversations
 
-- https://lingo.dev/en/cli
+### 💬 Conversational API Assistant
+- **Tambo AI** provides context-aware responses
+- Ask questions like "How do I authenticate?" or "Show me pagination examples"
+- Get instant, accurate answers about any API
 
-Set your Lingo.dev API key as `LINGODOTDEV_API_KEY` (or login via `npx lingo.dev@latest login`).
+### 🛠️ Interactive Endpoint Testing
+- Auto-generated forms for every API endpoint
+- Test with real parameters and see live responses
+- No Postman or curl commands needed
 
-To localize templates tun `npx lingo.dev@latest run`.
+### ⚡ Multi-Language Code Generation
+- **Lingo.dev** translates code between languages
+- Generate snippets in Python, Go, Rust, JavaScript, etc.
+- Perfect syntax for your preferred stack
 
-### Autumn
+### 📧 Proactive API Monitoring
+- **Resend** sends alerts for API changes
+- Get notified about breaking changes before they hit production
+- Usage limit warnings and update notifications
 
-The most simple and flexible way to setup payments.
+### 💰 Smart Usage-Based Billing
+- **Autumn** handles freemium model
+- Free tier: 1 workspace, 100 test calls/month
+- Automatic scaling for Pro and Team plans
 
-- https://useautumn.com/
-- [Sign up via this link](https://app.useautumn.com/sign-in?token=2zMnk448D3OFlXKsL9SBdj3609w) to auto create sample free and pro tiers in your Autumn sandbox.
-- Paste in [Stripe test secret key](https://dashboard.stripe.com/test/apikeys) to your Autumn account on [this page](https://app.useautumn.com/sandbox/onboarding)
-- Create your Autumn API key [in your account here](https://app.useautumn.com/sandbox/dev)
+## 📁 Project Structure
 
-Set your API key as `AUTUMN_SECRET_KEY` env variable.
-
-### Tambo
-
-Add React components to your AI assistant, copilot, or agent.
-
-- https://tambo.co/
-- https://tambo.co/docs
-
-Set your Tambo API key as `NEXT_PUBLIC_TAMBO_API_KEY` env variable. [The `NEXT_PUBLIC_` prefix makes it available client-side in browser.](https://nextjs.org/docs/app/guides/environment-variables#bundling-environment-variables-for-the-browser)
-
-**Use Tambo with BetterAuth** (`src/app/tambo/auth/page.tsx`):
-
-```typescript
-// Check session and get Google ID token
-const { data: session } = useSession();
-const token = await getAccessToken({ providerId: "google" });
-
-// Pass idToken to Tambo as userToken
-<TamboProvider
-  apiKey={process.env.NEXT_PUBLIC_TAMBO_API_KEY!}
-  userToken={token.data?.idToken}
->
-  <MessageThreadFull />
-</TamboProvider>
+```
+src/
+├── app/                          # Next.js App Router
+│   ├── dashboard/               # User dashboard
+│   ├── workspace/[api]/         # API-specific workspaces
+│   └── page.tsx                 # Landing page
+├── components/
+│   ├── api-whisperer/          # Project-specific components
+│   │   ├── firecrawl-api-scraper.tsx
+│   │   └── tambo-chat.tsx
+│   ├── better-auth/            # Authentication components
+│   ├── firecrawl/              # Web scraping components
+│   ├── tambo/                  # AI chat components
+│   ├── resend/                 # Email components
+│   ├── autumn/                 # Payment components
+│   └── magicui/                # UI components
+└── lib/
+    ├── auth.ts                 # Better Auth configuration
+    └── tambo/                  # Tambo AI tools & components
 ```
 
-### BetterAuth
+## 🎨 UI Components
 
-The most comprehensive authentication framework for TypeScript.
+The project uses **Magic UI** for beautiful, modern React components:
 
-- http://better-auth.com/
-- http://better-auth.com/docs
+- **Aurora Text** - Animated gradient text effects
+- **Interactive Forms** - Dynamic API endpoint testing
+- **Glass Morphism** - Modern backdrop blur effects
+- **Responsive Design** - Mobile-first approach
 
-Set the following env vars:
+## 🔐 Authentication
 
-- secret key as `BETTER_AUTH_SECRET`
-- base url as `BETTER_AUTH_URL`
+**Better Auth** provides:
+- GitHub OAuth integration
+- Secure session management
+- User profile extraction from GitHub repos
+- Automatic language preference detection
 
-### Supabase: Database Sync & Management via Prisma
+## 🤖 AI Integration
 
-After editing your Prisma schema (`prisma/schema.prisma` file) or on first setup, run:
+**Tambo AI** powers:
+- Context-aware API conversations
+- Dynamic component rendering
+- Tool integration for endpoint testing
+- Code generation assistance
+
+## 📊 Database Schema
+
+Powered by **Supabase + Prisma**:
+
+```prisma
+model User {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String?
+  workspaces  Workspace[]
+  conversations Conversation[]
+}
+
+model Workspace {
+  id          String   @id @default(cuid())
+  name        String
+  apiUrl      String
+  endpoints   Json
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model Conversation {
+  id          String   @id @default(cuid())
+  messages    Json
+  workspaceId String
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+}
+```
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push to GitHub
+2. Connect to Vercel
+3. Add environment variables
+4. Deploy! 🎉
+
+### Docker
 
 ```bash
-# Run a new migration and apply it to your database
-npx prisma migrate dev --name <migration-name>
-
-# Generate the Prisma client (usually done automatically by migrate)
-npx prisma generate
+docker build -t api-whisperer .
+docker run -p 3000:3000 api-whisperer
 ```
 
-Set database connection string as `DATABASE_URL` and `DIRECT_URL` env vars (in Supabase, choose _Connect -> ORMs -> Prisma_)
+## 🏆 Hackathon Highlights
 
-For more details on Prisma, see:
+### Perfect Demo Script
 
-- https://www.prisma.io/
-- https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma
+1. **Problem Introduction** (30s)
+   - Show frustrating API integration experience
 
-You can setup a Supabase database and lear about it here:
+2. **Solution Demo** (2 minutes)
+   - Live API documentation scraping
+   - Conversational AI interaction
+   - Code generation in multiple languages
+   - Interactive endpoint testing
 
-- https://supabase.com/
-- https://supabase.com/docs/guides/database/overview
+3. **Technology Integration** (1 minute)
+   - Highlight all 8 sponsored tools working together
+   - Show seamless user experience
 
-### Resend
+### What Makes This Special
 
-Email for developers
+- **Real-world Problem:** Every developer has felt this pain
+- **Comprehensive Solution:** Not just one feature, but an entire workflow
+- **Perfect Tool Integration:** Each sponsored tool has a clear, essential role
+- **Immediate Value:** Developers can use this right away
 
-- https://resend.com/
-- https://resend.com/docs/send-with-nextjs
+## 🤝 Contributing
 
-Set your API key as `RESEND_API_KEY` and sender email as `RESEND_FROM_EMAIL` env variables. Make sure you have the sender domain correctly configured in your Resend account.
+We'd love your help making API integration magical! Check out:
 
-### Firecrawl
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Development Setup](docs/development.md)
 
-Web scraping for devs & agents
+## 📄 License
 
-- https://www.firecrawl.dev/
-- https://docs.firecrawl.dev/
+MIT License - see [LICENSE](LICENSE) for details.
 
-Set your API key as `FIRECRAWL_API_KEY` env variable.
+## 🙏 Acknowledgments
 
-### MagicUI
+Special thanks to all the sponsored tool providers:
+- Better Auth, Supabase, Firecrawl, Tambo.co
+- Magic UI, Lingo.dev, Resend, useautumn.com
 
-UI library for Design Engineers
+---
 
-- https://magicui.design/
-- https://magicui.design/docs/components
+**Built with ❤️ for developers who deserve better API experiences.**
 
-### Next.js
-
-The React Framework for the Web
-
-- https://nextjs.org/docs
-- https://nextjs.org/learn
-
-### Setting up env variables
-
-You need to create and use your own accounts and setup env variables for your project. It is up to you how you do this:
-
-1. put them in `.env` file of your project. See `env.example` for a full list of env vars. Next.js loads them automatically for you.
-
-2. export them globally (eg. `export LINGODOTDEV_API_KEY=api_xxx`) in your shell or profile (eg. `~/.profile`)
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-When deploying to Vercel make sure to populate all env variables in your app.
+[🌟 Star this repo](https://github.com/yourusername/api-whisperer) | [🐛 Report Bug](https://github.com/yourusername/api-whisperer/issues) | [💡 Request Feature](https://github.com/yourusername/api-whisperer/issues)
